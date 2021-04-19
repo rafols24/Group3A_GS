@@ -56,9 +56,6 @@
                     <div class="d-flex justify-content-center">
                         <a id="footer">Thank you for signing in</a>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <h2 id="footer"> HOPIA DE TRES</h2>
-                    </div>
                 </div>
             </div>
         </div>
