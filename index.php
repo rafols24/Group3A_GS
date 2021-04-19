@@ -1,6 +1,6 @@
-<!------ Include the above in your HEAD tag ---------->
-
+<?php include 'function.php';?>
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -45,8 +45,8 @@
                             <input type="checkbox">Remember Me
                         </div>
                         <div class="form-group">
-                            <img src="hopia1.jpg" alt="Hopia" class="image float-right login_btn">
-                            <img src="hopia1.jpg" alt="Hopia" class="image float-right login_btn">
+                            <img src="imgs/hopia1.jpg" alt="Hopia" class="image float-right login_btn">
+                            <img src="imgs/hopia1.jpg" alt="Hopia" class="image float-right login_btn">
                             <input type="submit" value="Login" class="btn float-left login_btn"><br><br>
                             <input type="submit" value="Register" class="btn float-left login_btn">
                         </div>
