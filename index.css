@@ -91,3 +91,39 @@ input:focus {
 .image {
     width: 100px;
 }
+
+
+/* for the mainpage */
+
+.card1 {
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    background-color: rgba(215, 241, 234, 0.623) !important;
+}
+
+.dashboard {
+    background-color: green;
+    float: left;
+    height: 90%;
+    width: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+}
+
+.dash {
+    background-color: grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+}
+
+#dash {
+    height: 30px;
+}
