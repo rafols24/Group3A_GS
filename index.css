@@ -1,129 +1,229 @@
-@import url('https://fonts.googleapis.com/css?family=Numans');
-html,
+/* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/* End Fonts */
+
+
+/* Start Global rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* End Global rules */
+
+
+/* Start body rules */
+
 body {
-    background-image: url('imgs/hopia2.jpg');
-    background-size: cover;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
+    font-family: 'Vibur', cursive;
+    /*   the main font */
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
 }
 
-.container {
-    height: 100%;
-    align-content: center;
+
+/* |||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+/* //////////////////////////////////////////// */
+
+
+/* End body rules */
+
+
+/* Start form  attributes */
+
+form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
 }
 
-.card {
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+
+/* form Container */
+
+form .con {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-.social_icon span {
-    font-size: 60px;
-    margin-left: 10px;
-    color: #FFC312;
+
+/* the header form form */
+
+header {
+    margin: 2% auto 10% auto;
+    text-align: center;
 }
 
-.social_icon span:hover {
-    color: white;
+
+/* Login title form form */
+
+header h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+}
+
+
+/*  A welcome message or an explanation of the login form */
+
+header p {
+    letter-spacing: 0.05em;
+}
+
+
+/* //////////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////// */
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+/* Show/hide password Font Icon */
+
+#eye {
+    background: #fff;
+    color: #333;
+    margin: 5.9px 0 0 0;
+    margin-left: -20px;
+    padding: 15px 9px 19px 0px;
+    border-radius: 0px 5px 5px 0px;
+    float: right;
+    position: relative;
+    right: 1%;
+    top: -.2%;
+    z-index: 5;
     cursor: pointer;
 }
 
-.card-header h3 {
-    color: white;
+
+/* inputs form  */
+
+input[class="form-input"] {
+    width: 240px;
+    height: 50px;
+    margin-top: 2%;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+    outline: none;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
 }
 
-.social_icon {
-    position: absolute;
-    right: 20px;
-    top: -45px;
+input[id="txt-input"] {
+    width: 250px;
 }
 
-.input-group-prepend span {
-    width: 50px;
-    background-color: #FFC312;
-    color: black;
-    border: 0 !important;
-}
+
+/* focus  */
 
 input:focus {
-    outline: 0 0 0 0 !important;
-    box-shadow: 0 0 0 0 !important;
-}
-
-.remember {
-    color: white;
-}
-
-.remember input {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 5px;
-}
-
-.login_btn {
-    color: black;
-    background-color: #FFC312;
-    width: 100px;
-}
-
-.login_btn:hover {
-    color: black;
-    background-color: white;
-}
-
-.links {
-    color: white;
-}
-
-.links a {
-    margin-left: 4px;
-}
-
-#footer {
-    color: white;
-}
-
-.image {
-    width: 100px;
+    transform: translateX(-2px);
+    border-radius: 5px;
 }
 
 
-/* for the mainpage */
+/* //////////////////////////////////////////// */
 
-.card1 {
-    height: 90%;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 100%;
-    background-color: rgba(215, 241, 234, 0.623) !important;
+
+/* //////////////////////////////////////////// */
+
+
+/* input[type="text"] {min-width: 250px;} */
+
+
+/* buttons  */
+
+button {
+    display: inline-block;
+    color: #252537;
+    width: 280px;
+    height: 50px;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: 7% auto;
+    letter-spacing: 0.05em;
 }
 
-.dashboard {
-    background-color: green;
+
+/* Submits */
+
+.submits {
+    width: 48%;
+    display: inline-block;
     float: left;
-    height: 90%;
-    width: 20%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 15px;
+    margin-left: 2%;
 }
 
-.dash {
-    background-color: grey;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid black;
+
+/*       Forgot Password button FAF3DD  */
+
+.frgt-pass {
+    background: transparent;
 }
 
-#dash {
-    height: 30px;
+
+/*     Sign Up button  */
+
+.sign-up {
+    background: #B8F2E6;
+}
+
+
+/* buttons hover */
+
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+
+/* buttons hover Animation */
+
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
 }
