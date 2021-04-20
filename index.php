@@ -53,7 +53,7 @@
       <br><br>
 <!--        buttons -->
 <!--      button LogIn -->
-      <button class="log-in"> Log In </button>
+<center><button type="button" class="btn btn-outline-dark">Log In</button></center>
    </div> 
    
 <!--   End Conrainer  -->
