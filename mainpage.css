@@ -53,7 +53,7 @@ a {
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("imgs/Main.png");
+    /* background-image: url("imgs/Main.png"); */
     background-repeat: no-repeat;
     background-size: cover;
 }
