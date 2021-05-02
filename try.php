@@ -171,7 +171,7 @@
           </section>
           </span>
           <br>
-          <div class="cart transition is-open">
+          <div class="cart transition is-open text-center">
                <div class="table table-bordered border-dark">
                     <div class="layout-inline row th border border-dark">
                          <div class="col col-pro">Product by Flavor</div>
@@ -191,7 +191,7 @@
                          </div>
                          <div class="col col-qty layout-inline">
                               <a href="#" class="qty qty-minus">-</a>
-                              <input type="numeric" value="3" />
+                              <input type="numeric" value="0" />
                               <a href="#" class="qty qty-plus">+</a>
                          </div>
                          <div class="col col-vat col-numeric">
@@ -214,7 +214,7 @@
 
                          <div class="col col-qty  layout-inline">
                               <a href="#" class="qty qty-minus ">-</a>
-                              <input type="numeric" value="1" />
+                              <input type="numeric" value="0" />
                               <a href="#" class="qty qty-plus">+</a>
                          </div>
 
@@ -234,13 +234,13 @@
                               <p>PANDAN FLAVOR</p>
                          </div>
 
-                         <div class="col col-price col-numeric align-center ">
+                         <div class="col col-price col-numeric align-center">
                               <p>£59.99</p>
                          </div>
 
                          <div class="col col-qty layout-inline">
                               <a href="#" class="qty qty-minus">-</a>
-                              <input type="numeric" value="3" />
+                              <input type="numeric" value="0"/>
                               <a href="#" class="qty qty-plus">+</a>
                          </div>
 
@@ -251,7 +251,7 @@
                               <p>£182.95</p>
                          </div>
                     </div>
-            
+
                </div>
                <br>
                <section id="income">
@@ -346,22 +346,37 @@
                chart.draw(data, options);
           }
 
+// PLUS MINUS IN QTY COL OF TABLE
+          $('a.qty-minus').on('click', function(e) {
+               e.preventDefault();
+               var $this = $(this);
+               var $input = $this.closest('div').find('input');
+               var value = parseInt($input.val());
 
-          function myFunction() {
-               var dots = document.getElementById("dots");
-               var moreText = document.getElementById("more");
-               var btnText = document.getElementById("myBtn");
-
-               if (dots.style.display === "none") {
-                    dots.style.display = "inline";
-                    btnText.innerHTML = "Read more";
-                    moreText.style.display = "none";
+               if (value > 1) {
+                    value = value - 1;
                } else {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Read less";
-                    moreText.style.display = "inline";
+                    value = 0;
                }
-          }
+
+               $input.val(value);
+
+          });
+
+          $('a.qty-plus').on('click', function(e) {
+               e.preventDefault();
+               var $this = $(this);
+               var $input = $this.closest('div').find('input');
+               var value = parseInt($input.val());
+
+               if (value < 100) {
+                    value = value + 1;
+               } else {
+                    value = 100;
+               }
+
+               $input.val(value);
+          });
           </script>
 </body>
 
