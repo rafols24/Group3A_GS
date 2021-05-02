@@ -38,7 +38,7 @@
      text-align: center;
    }
    
-   img {
+   .img {
      max-width: 9em;
      width: 100%;
      overflow: hidden; 
@@ -92,18 +92,6 @@
      text-transform: uppercase;
      font-weight: bold;
      font-size: 1.5em;
-   }
-   
-   .tf {
-     background: #f34d35;
-     text-transform: uppercase;
-     text-align: right;
-     font-size: 1.2em;  
-   }
-   
-   .tf p {
-     color: #fff;
-     font-weight: bold;
    }
    
    .col {
@@ -224,3 +212,189 @@
    @media screen and ( max-width: 591px) {
      
    }
+
+
+    /* body {
+        font-family: "Lato", sans-serif;
+    } */
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        background-color: #212422;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidebar .nav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar .nav a:hover {
+        padding: 50px 35px 35px 50px;
+        font-size: 25px;
+        border-left: 10px solid #3e84c1;
+        background-color: #fc4e03;
+        height:auto;
+        padding: 5px;
+        width: 100%;
+        transition:.5s;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+    }
+
+    .openNav-div{
+        height: 10%;
+        position:fixed;
+        z-index:1;
+        width:100%;
+        background-color: #e74c3c;
+    }
+
+    .openbtn {
+        font-size: 45px;
+        cursor: pointer;
+        color: black;
+        border: none;
+        margin:2%;
+    }
+
+    .openbtn:hover {
+        color:white;
+    }
+
+    #main {
+        transition: margin-left .3s;
+        padding: 16px;
+    }
+
+    .slide a {
+        font-size: 25px;
+        color: #212422;
+    }
+
+    #top-selling{
+        margin-top: 5%;
+    }
+
+    /*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 80px; 
+  margin-left: 14%;
+
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+
+  width: 100%;
+  height: 300px;
+}
+/* #cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+} */
+
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  /* -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; */
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+
+
+
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  /* -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; */
+ 
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}
+
+#more {
+    display: none;
+}
+
+.checked {
+  color: orange;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
