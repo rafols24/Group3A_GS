@@ -52,7 +52,7 @@ class MyStore{
 
             if($total > 0){
                 $_SESSION['username'] = $username;
-                header("Location: mainpage.php");
+                header("Location: try.php");
             }else{
                 echo "login failed!";
             }
