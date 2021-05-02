@@ -24,12 +24,35 @@
     }
 </script>
 
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("navbar").style.height = "50px";
+        } else {
+            document.getElementById("navbar").style.height = "400px";
+        }
+    }
+</script>
+
 <style>
+    body { 
+    margin-top:100px;
+    font-family: Arial, Helvetica, sans-serif;
+    position:static;
+    }
 
-    /* body {
-        font-family: "Lato", sans-serif;
-    } */
-
+    #navbar {
+        overflow: hidden;
+        background-color: #e74c3c;
+        padding-bottom: 70px;
+        transition: 0.4s;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 4;
+        height:400px;
+    }
     .sidebar {
         height: 100%;
         width: 0;
@@ -74,20 +97,14 @@
         color: white;
     }
 
-    .openNav-div{
-        height: 10%;
-        position:fixed;
-        z-index:1;
-        width:100%;
-        background-color: #e74c3c;
-    }
-
     .openbtn {
         font-size: 45px;
         cursor: pointer;
         color: black;
         border: none;
-        margin:2%;
+        margin-left:3%;
+        position:fixed;
+
     }
 
     .openbtn:hover {
@@ -95,8 +112,7 @@
     }
 
     #main {
-        transition: margin-left .3s;
-        padding: 16px;
+       padding-top:450px;
     }
 
     .slide a {
@@ -104,115 +120,174 @@
         color: #212422;
     }
 
+    .header{
+        height: 500px;
+        background-color:black;
+    }
+
 </style>
 
 </head>
 <body>
-    <div class="openNav-div">
-            <a href="#" class="openbtn"  onclick="openNav()">
-                 <i class="fas fa-bars"></i>
-            </a>
+
+    <div id="navbar">
+        <a class="openbtn"  onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </a>
     </div>
 
-    <div id="mySidebar" class="sidebar">
-        <span>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        </span>
-        <div class="logo">
-            <h3 class="text-center text-white">HOPIA DE TRES</h3>
+        <div id="mySidebar" class="sidebar">
+            <span>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </span>
+            <div class="logo">
+                <h3 class="text-center text-white">HOPIA DE TRES</h3>
+            </div>
+            <br><br>
+            <p class="align-items-center text-white bg-warning p-2"><img id= "dash" src= "imgs/dash.png">ADMIN DASHBOARD</p>
+            <br><br>
+            <div class="nav">
+                <a href="#top-selling" ><img id= "dash" src = "imgs/cart.png">TOP SELLING</a><br>
+                <a href="#purchase"><img id= "dash" src = "imgs/income.png">PURCHASE</a><br><br>
+                <a href="#expenses"><img id= "dash" src = "imgs/expense.png">EXPENSES</a><br>
+                <a href="#financial-report"><img id= "dash" src = "imgs/finance.png">FINANCIAL REPORT</a><br>
+                <a href="#incoming-delivery"><img id= "dash" src = "imgs/incoming.png">INCOMING DELIVERY</a><br>
+                <a href="#received-delivery"><img id= "dash" src = "imgs/delivered.png">RECEIVED DELIVERY</a>
+            </div>
         </div>
-        <br><br>
-        <p class="align-items-center text-white bg-warning p-2"><img id= "dash" src= "imgs/dash.png">ADMIN DASHBOARD</p>
-        <br><br>
-        <div class="nav">
-            <a href="#top-selling" ><img id= "dash" src = "imgs/cart.png">TOP SELLING</a><br>
-            <a href="#income"><img id= "dash" src = "imgs/income.png">INCOME</a><br><br>
-            <a href="#expenses"><img id= "dash" src = "imgs/expense.png">EXPENSES</a><br>
-            <a href="#financial-report"><img id= "dash" src = "imgs/finance.png">FINANCIAL REPORT</a><br>
-            <a href="#incoming-delivery"><img id= "dash" src = "imgs/incoming.png">INCOMING DELIVERY</a><br>
-            <a href="#received-delivery"><img id= "dash" src = "imgs/delivered.png">RECEIVED DELIVERY</a>
-        </div>
-    </div>
+   
 
     <div id="main">
-        <section id="top-selling">
-                TOP SELLING <br>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </section>
-        <br>
-        <br>
-        <section id="income">
-                INCOME<br>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </section>
-        <br>
-        <br>
-        <section id="expenses">
-                EXPENSES <br>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </section>
-        <br>
-        <br>
-        <section id="financial-report">
-                FINANCIAL STATUS <br>
-                <div id="chart_div" style="width: 900px; height: 500px;"></div>
-        </section>
-        <br>
-        <br>
-        <section id="incoming-delivery">
-                INCOMING DELIVERY <br>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </section>
-        <br>
-        <br>
-        <section id="received-delivery">
-                RECEIVED DELIVERY <br>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </section>
+        <div class="container ">
+            <section id="top-selling">
+                <h1 class="text-center"> TOP SELLING </h1>
+                     <br>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </section>
+            <br>
+            <br>
+            <section id="purchase">
+                <h1 class="text-center"> PURCHASES </h1>
+                    <br>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </section>
+            <br>
+            <br>
+            <section id="expenses">
+                <h1 class="text-center"> EXPENSES </h1>
+                     <br>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </section>
+            <br>
+            <br>
+            <hr>
+            <section id="financial-report">
+                  <h1 class="text-center"> FINANCIAL REPORT </h1>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="card col-md-8 " >
+                            <div id="chart_div" style="height:500px;" ></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card w-75 h-25 float-right mb-4 mt-4 text-center">
+                                <div class="card-header bg-primary h2 text-white">
+                                    Sold
+                                </div>
+                                <div class="card-body h3">
+                                   <p id="sold">5000</p>
+                                </div>
+                            </div>
+                            <div class="card w-75 h-25 float-right mb-4 text-center">
+                                <div class="card-header bg-danger h2 text-white">
+                                    Expenses
+                                </div>
+                                <div class="card-body h3">
+                                   <p id="sold">5000</p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="card w-75 h-25 float-right text-center">
+                                <div class="card-header bg-warning h2 text-white">
+                                    Income
+                                </div>
+                                <div class="card-body h3">
+                                   <p id="sold">5000</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+            </section>
+            <br>
+            <br>
+            <section id="incoming-delivery">
+                    INCOMING DELIVERY <br>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </section>
+            <br>
+            <br>
+            <section id="received-delivery">
+                    RECEIVED DELIVERY <br>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </section>
+        </div>
     </div>  
+</body>
+</html> 
 
 
-    <script type="text/javascript">
+<script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawVisualization);
 
       function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
-          ['Month', 'Expenses', 'SOLD'],
-          ['2004/05',  165,      938],
-          ['2005/06',  135,      1120],
-          ['2006/07',  157,      1167],
-          ['2007/08',  139,      1110],
-          ['2008/09',  136,      691]
+          ['Month', 'SOLD',    'EXPENSES', 'INCOME'],
+          ['01', 3000,         1000,      2000],
+          ['02', 599,         288,      682],
+          ['03',  587,        397,      623],
+          ['04', 615,         215,      609.4],
+          ['05', 629,         366,      569.6],
+          ['06', 800,         1000,      500],
+          ['07', 599,         288,      682],
+          ['08',  587,        397,      623],
+          ['09', 615,         215,      609.4],
+          ['10', 629,         366,      569.6],
+          ['11', 1500,         1000,     200],
+          ['12', 599,         288,      682],
+          ['13',  587,        397,      623],
+          ['14', 615,         215,      609.4],
+          ['15', 629,         366,      569.6]
         ]);
 
         var options = {
-          title : 'Monthly Coffee Production by Country',
-          vAxis: {title: 'Cups'},
-          hAxis: {title: 'Month'},
+          title : 'Daily Transaction Report for the Month of May 2021',
+          vAxis: {title: 'no. of boxes'},
+          hAxis: {title: 'Daily Report'},
           seriesType: 'bars',
-          series: {5: {type: 'line'}}
+          series: {2: {type: 'line'}}
         };
 
         var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
-</body>
-</html> 
